@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeapCode · Portfólio de Design — Paulo Fernando Rodrigues</title>
+  <meta name="description" content="Portfólio da disciplina de Design Gráfico (IFC Camboriú) de Paulo Fernando Rodrigues — LeapCode." />
+  <link rel="icon" type="image/png" href="assets/img/sapo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="is-legacy">
+
+  <!-- =====================================================
+       MODO LEGADO — o "sistema antigo"
+       ===================================================== -->
+  <section id="legacy" aria-label="Tela inicial retrô">
+    <div class="room-glow" aria-hidden="true"></div>
+
+    <div class="monitor">
+      <div class="postit" aria-hidden="true">TODO:<br />modernizar<br />este sistema!</div>
+
+      <div class="bezel">
+        <div class="screen" id="screen">
+          <div class="crt-content" id="crtContent">
+            <div class="crt-top">
+              <span>LEAPCODE BIOS v1.0</span>
+              <span>(C) 1996 SAPO SYSTEMS</span>
+            </div>
+
+            <pre class="boot" id="boot" aria-live="polite"></pre>
+
+            <div class="crt-main" id="crtMain">
+              <img class="crt-frog" id="crtFrog" src="assets/img/sapo.png" alt="Sapo em pixel art, mascote da LeapCode" />
+              <div class="crt-title">
+                <h1>LEAPCODE<span class="blink">_</span></h1>
+                <p>portfolio.exe · Paulo Fernando Rodrigues</p>
+                <p class="dim">Design Gráfico · IFC Camboriú · 2026/2</p>
+              </div>
+            </div>
+
+            <div class="win95" id="startWin">
+              <div class="win95-bar"><span>portfolio.exe</span><span class="win95-x">×</span></div>
+              <div class="win95-body">
+                <p>Foi detectado um sistema <b>legado</b>.<br />Deseja iniciar a modernização?</p>
+                <button class="win95-btn" id="startBtn" type="button">&gt; INICIAR APRESENTAÇÃO</button>
+                <small>ou pressione ENTER</small>
+              </div>
+            </div>
+
+            <!-- janela de download (transição) -->
+            <div class="win95 dl" id="dlWin" hidden>
+              <div class="win95-bar"><span>Atualizando sistema...</span><span class="win95-x">×</span></div>
+              <div class="win95-body">
+                <p id="dlText">Downloading portfolio_v2.exe...</p>
+                <div class="dl-bar"><div class="dl-fill" id="dlFill"></div></div>
+                <p class="dl-pct"><span id="dlPct">0</span>%</p>
+                <small id="dlNote">&nbsp;</small>
+              </div>
+            </div>
+          </div>
+          <div class="scanlines" aria-hidden="true"></div>
+          <div class="crt-off" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="monitor-chin">
+        <span class="brand">LEAP·CRT 14"</span>
+        <span class="led" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <img class="jump-frog" id="jumpFrog" src="assets/img/sapo.png" alt="" aria-hidden="true" />
+    <button class="skip" id="skipBtn" type="button">pular intro →</button>
+  </section>
+
+  <!-- =====================================================
+       MODO MODERNO — o "sistema modernizado"
+       ===================================================== -->
+  <div id="modern" hidden>
+    <header class="nav">
+      <a class="logo" href="#topo" aria-label="LeapCode, início">
+        <img src="assets/img/sapo.png" alt="" />
+        <span><b>Leap</b>Code</span>
+      </a>
+      <nav aria-label="Seções">
+        <a href="#projetos">// projetos</a>
+        <a href="#processo">// processo</a>
+        <a href="#site">// este site</a>
+        <a href="#sobre">// sobre</a>
+      </nav>
+      <button class="btn-ghost" id="legacyBtn" type="button" title="Voltar para a versão retrô">⟲ modo legado</button>
+    </header>
+
+    <main id="topo">
+      <!-- HERO: leitura em Z -->
+      <section class="hero">
+        <div class="hero-text reveal">
+          <p class="comment">// portfólio · design gráfico · 2026/2</p>
+          <h1>O próximo salto<br />do meu <span class="g">design</span></h1>
+          <p class="lead">Seis projetos da disciplina de Design Gráfico, organizados como a LeapCode trabalha: pegar o que existe, entender e dar um salto para o moderno.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#projetos">Ver projetos</a>
+            <a class="btn-link" href="#site">Como este site foi pensado →</a>
+          </div>
+        </div>
+        <div class="hero-art reveal">
+          <div class="frog-card">
+            <img src="assets/img/sapo.png" alt="Sapo em pixel art da LeapCode" />
+            <span class="frog-shadow" aria-hidden="true"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETOS -->
+      <section id="projetos" class="section">
+        <div class="section-head reveal">
+          <p class="comment">/* 01 - projetos */</p>
+          <h2>Trabalhos do semestre</h2>
+          <p class="muted">Clique em um projeto para ver a imagem final, o desenvolvimento, a explicação e a justificativa do design.</p>
+        </div>
+        <div class="grid12" id="grid"></div>
+      </section>
+
+      <!-- PROCESSO (seção clara, como os slides da marca) -->
+      <section id="processo" class="section light">
+        <div class="section-head reveal">
+          <p class="comment">/* 02 - processo */</p>
+          <h2>Como cada projeto nasceu</h2>
+          <p class="muted">Todos os trabalhos seguem as quatro fases do processo criativo de Kneller (1978).</p>
+        </div>
+        <ol class="steps">
+          <li class="reveal"><span class="step-n">01</span><h3>Preparação</h3><p>Identificar o problema e pesquisar: briefing, referências, conteúdo das aulas.</p></li>
+          <li class="reveal"><span class="step-n">02</span><h3>Incubação</h3><p>Deixar as ideias amadurecerem: brainstorming, mapa mental, painel semântico.</p></li>
+          <li class="reveal"><span class="step-n">03</span><h3>Iluminação</h3><p>O momento "eureka", quando o conceito da peça aparece.</p></li>
+          <li class="reveal"><span class="step-n">04</span><h3>Revisão</h3><p>Testar, ajustar hierarquia, legibilidade e contraste, e validar com o objetivo.</p></li>
+        </ol>
+      </section>
+
+      <!-- ESTE SITE -->
+      <section id="site" class="section">
+        <div class="section-head reveal">
+          <p class="comment">/* 03 - este site também é design */</p>
+          <h2>O que a Unidade 3 tem a ver com esta página</h2>
+          <p class="muted">A abertura retrô é o "sistema legado". O botão de iniciar faz o salto para a versão moderna, que é o que a LeapCode promete fazer com software.</p>
+        </div>
+        <div class="apps" id="apps"></div>
+      </section>
+
+      <!-- SOBRE -->
+      <section id="sobre" class="section light">
+        <div class="about reveal">
+          <div>
+            <p class="comment">/* 04 - sobre */</p>
+            <h2>Paulo Fernando Rodrigues</h2>
+            <p>Estudante de Tecnologia em Sistemas para Internet no IFC Campus Camboriú e desenvolvedor. Também atendo por <b>SapoCharmoso</b>, de onde saiu o sapo da LeapCode.</p>
+            <p>Sério no código, leve na conversa.</p>
+          </div>
+          <ul class="about-meta">
+            <li><span>disciplina</span>STC0315 · Design Gráfico</li>
+            <li><span>semestre</span>2026/2</li>
+            <li><span>código</span><a href="https://github.com/SapoCharmoso/portifolio-design" target="_blank" rel="noopener">github.com/SapoCharmoso</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span><b>Leap</b>Code · Paulo Fernando Rodrigues · 2026</span>
+      <span class="comment">// feito à mão em HTML, CSS e JS</span>
+    </footer>
+  </div>
+
+  <!-- Detalhe do projeto -->
+  <dialog id="proj" aria-labelledby="projTitle">
+    <div class="proj-wrap">
+      <div class="proj-bar">
+        <span class="comment" id="projTag"></span>
+        <button class="proj-close" id="projClose" type="button" aria-label="Fechar">✕</button>
+      </div>
+      <div class="proj-body" id="projBody"></div>
+    </div>
+  </dialog>
+
+  <script src="js/projetos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
