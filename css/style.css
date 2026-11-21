@@ -85,7 +85,7 @@ body.is-legacy { overflow: hidden; }
 .bezel {
   background: linear-gradient(160deg, #e6dec4, var(--beige) 40%, var(--beige-d));
   padding: clamp(14px, 3vw, 34px);
-  border-radius: 26px 26px 10px 10px;
+  border-radius: 26px 26px 0 0;   /* encaixa reto no "queixo" do monitor */
   box-shadow: inset 0 2px 0 rgba(255,255,255,.6), inset 0 -4px 10px rgba(0,0,0,.18);
 }
 .monitor-chin {
@@ -109,14 +109,15 @@ body.is-legacy { overflow: hidden; }
 
 .screen {
   position: relative;
-  aspect-ratio: 4 / 3;
   background: radial-gradient(ellipse at center, #0c1d12 0%, var(--crt-bg) 70%, #030805 100%);
   border-radius: 18px / 22px;
   overflow: hidden;
   box-shadow: inset 0 0 60px rgba(0,0,0,.9), inset 0 0 12px rgba(109,255,156,.15);
 }
 .crt-content {
-  position: absolute; inset: 0;
+  position: relative;
+  aspect-ratio: 4 / 3;            /* cresce se o conteúdo precisar */
+  display: flex; flex-direction: column;
   padding: clamp(14px, 3.4%, 30px);
   font-family: var(--f-retro);
   color: var(--phosphor);
@@ -133,10 +134,10 @@ body.is-legacy { overflow: hidden; }
   border-bottom: 2px dashed var(--phosphor-d);
   padding-bottom: 6px; margin-bottom: 8px;
 }
-.boot { margin: 0; font: inherit; white-space: pre-wrap; min-height: 6.2em; }
+.boot { margin: 0; font: inherit; white-space: pre-wrap; min-height: 6.2em; flex-shrink: 0; }
 .crt-main {
   display: flex; align-items: center; gap: 4%;
-  margin-top: 2%;
+  margin: 2% 0 4%;
   opacity: 0; transition: opacity .6s;
 }
 .crt-main.on { opacity: 1; }
@@ -157,7 +158,8 @@ body.is-legacy { overflow: hidden; }
 
 /* janela estilo Win95 */
 .win95 {
-  position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%);
+  position: relative;
+  margin: auto auto 0;            /* no fluxo: sempre abaixo do nome, centralizada */
   width: min(78%, 440px);
   background: #c3c7cb; color: #000; text-shadow: none;
   border: 2px solid; border-color: #fff #404040 #404040 #fff;
@@ -212,7 +214,7 @@ body.is-legacy { overflow: hidden; }
 }
 
 .skip {
-  position: absolute; right: 18px; bottom: 16px;
+  position: absolute; right: 18px; top: 14px;
   background: none; border: 0; cursor: pointer;
   color: #8a7f66; font-family: var(--f-mono); font-size: 13px;
 }
@@ -453,11 +455,11 @@ dialog#proj[open] { animation: fadeUp .35s ease; }
 @media (max-width: 620px) {
   .monitor { width: 94vw; }
   .screen { aspect-ratio: auto; min-height: 70vh; }
-  .crt-content { position: relative; inset: auto; font-size: 17px; padding: 16px 14px 20px; min-height: 70vh; }
+  .crt-content { aspect-ratio: auto; font-size: 17px; padding: 16px 14px 20px; min-height: 70vh; }
   .boot { min-height: 7.5em; font-size: 15px; }
   .crt-main { flex-direction: column; align-items: flex-start; gap: 10px; }
   .crt-frog { width: 90px; }
   .crt-title h1 { font-size: 54px; }
-  .win95 { position: relative; left: auto; bottom: auto; transform: none; width: 100%; margin-top: 18px; }
+  .win95 { width: 100%; margin-top: 18px; }
   .monitor-chin { padding: 8px 18px; }
 }

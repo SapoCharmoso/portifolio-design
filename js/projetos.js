@@ -24,7 +24,7 @@ const PROJETOS = [
     explicacao:
       "Criação de uma marca e de uma apresentação de 4 slides: capa, sobre a empresa (missão e visão), perfil e linguagem (área, público, personalidade e tom de voz) e o painel semântico com as referências visuais. A LeapCode faz sistemas web sob medida e moderniza software legado.",
     kneller: [
-      ["Preparação", "Ponto de partida no meu apelido, SapoCharmoso, e na minha área real de trabalho: desenvolvimento e manutenção de sistemas antigos."],
+      ["Preparação", "Ponto de partida na minha área real de trabalho: desenvolvimento e manutenção de sistemas antigos, e a ideia de um sapo como mascote."],
       ["Incubação", "A primeira versão ficou fofa demais para uma empresa de software. Busquei um visual mais profissional, com pegada de game."],
       ["Iluminação", "\"Leap\" quer dizer salto: o sapo salta, e a empresa faz o software dar o salto do legado para o moderno. Nome e mascote passaram a contar a mesma história."],
       ["Revisão", "Montei o painel semântico com terminais, pixel art e interfaces retrô para validar o clima da marca antes de fechar os slides."]

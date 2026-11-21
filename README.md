@@ -30,4 +30,4 @@ Dica: um link com `#` (ex.: `.../#projetos`) pula a intro e vai direto ao modo m
 
 ## Publicar (GitHub Pages)
 Settings → Pages → Source: *Deploy from a branch* → Branch: `main` / `(root)` → Save.
-O site fica em: https://sapocharmoso.github.io/portifolio-design/
+O endereço aparece na própria tela do Pages depois de publicar.
